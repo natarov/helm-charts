@@ -1,5 +1,7 @@
 # httpbin
 
+[View the project on GitHub Pages](https://natarov.github.io/helm-charts)
+
 httpbin is a simple HTTP Request & Response Service. It can be used to test HTTP libraries and applications by providing endpoints that return various HTTP responses.
 
 
@@ -81,3 +83,35 @@ To install the `httpbin` Helm chart, follow these steps:
      ```
 
    - This command removes all the Kubernetes components associated with the chart and deletes the release.
+
+
+## Example `values.yaml` for Enabling Ingress and Using NodeSelector with Taints
+
+To enable ingress and use a nodeSelector with taints, you can create a `values.yaml` file with the following content:
+
+```yaml
+# Enable ingress
+ingress:
+  enabled: true
+  hosts:
+    - host: example.local
+
+# Use nodeSelector and tolerations for nodes with taints
+nodeSelector:
+  app: httpbin
+
+tolerations:
+  - key: "key1"
+    operator: "Equal"
+    value: "value1"
+    effect: "NoSchedule"
+```
+
+You can then install the chart using this `values.yaml` file:
+
+```bash
+helm install my-release -f values.yaml my-github-repo/httpbin
+```
+
+This configuration enables ingress and ensures that the pods are scheduled on nodes with the specified taints.
+
