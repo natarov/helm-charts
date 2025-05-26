@@ -1,0 +1,26 @@
+apiVersion: v2
+name: httpbin
+description: A Helm chart for deploying the httpbin service on Kubernetes
+version: 1.0.0
+appVersion: "latest"
+
+maintainers:
+  - name: Alex
+    email: natarov23@gmail.com
+
+keywords:
+  - httpbin
+  - http
+  - testing
+  - kubernetes
+
+home: https://httpbin.org
+
+sources:
+  - https://github.com/kennethreitz/httpbin
+
+icon: https://httpbin.org/icon.png
+
+annotations:
+  category: "Application"
+  support: "Community"

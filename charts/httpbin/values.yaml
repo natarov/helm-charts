@@ -1,0 +1,115 @@
+
+# Number of replicas for the deployment
+replicaCount: 3
+
+
+# Docker image repository and tag
+image:
+  # The repository of the Docker image
+  repository: kennethreitz/httpbin
+  # The image pull policy
+  pullPolicy: IfNotPresent
+  # The tag of the Docker image
+  tag: "latest"
+
+
+# Secrets for pulling images from private registries
+imagePullSecrets: []
+
+
+# Override the name of the chart
+nameOverride: ""
+# Override the full name of the chart
+fullnameOverride: ""
+
+
+# Annotations to be added to pods
+podAnnotations: {}
+
+
+# Security context for the pod
+podSecurityContext:
+  # The user ID to run the pod as
+  runAsUser: 1000
+
+# Security context for the container
+securityContext:
+  # Capabilities to drop
+  capabilities:
+    drop:
+    - ALL
+  # Run the container as a non-root user
+  readOnlyRootFilesystem: true
+  runAsNonRoot: true
+
+# CPU and memory resource requests and limits
+resources:
+  requests:
+    # CPU request
+    cpu: 100m
+    # Memory request
+    memory: 128Mi
+  limits:
+    # Memory limit
+    memory: 128Mi
+
+# Node labels for pod assignment
+nodeSelector:
+  app: httpbin
+
+
+# Define any tolerations for the pods
+# tolerations: []
+
+# Affinity settings
+# This section defines the pod anti-affinity rules to prevent
+# the scheduler from placing the pods on the same node.
+# It uses a label selector to match pods with the label
+# 'app.kubernetes.io/name: httpbin' and ensures they are
+# spread across different zones based on the topology key.
+# affinity:
+#   podAntiAffinity:
+#     requiredDuringSchedulingIgnoredDuringExecution:
+#       - labelSelector:
+#           matchExpressions:
+#             - key: app.kubernetes.io/name
+#               operator: In
+#               values:
+#                 - httpbin
+#         topologyKey: "topology.kubernetes.io/zone"
+
+# Topology spread constraints
+# Constraints to spread pods across zones
+# based on the topology key
+topologySpreadConstraints:
+  - maxSkew: 1
+    topologyKey: topology.kubernetes.io/zone
+    whenUnsatisfiable: DoNotSchedule
+    labelSelector:
+      matchLabels:
+        app.kubernetes.io/name: httpbin
+
+# Kubernetes service type and port
+service:
+  # The type of the service
+  type: ClusterIP
+  # The port of the service
+  port: 80
+
+# Ingress configuration for the application
+ingress:
+  # Enable or disable ingress
+  enabled: true
+  # Annotations for the ingress
+  annotations: {}
+  # The ingress class name
+  ingressClassName: ""
+  # Hosts configuration for the ingress
+  hosts:
+    - host: chart-example.local
+      # paths:
+      #   - path: /
+      #     pathType: Prefix
+  # TLS configuration for the ingress
+  tls: {}
+
