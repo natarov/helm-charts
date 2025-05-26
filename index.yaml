@@ -1,0 +1,28 @@
+apiVersion: v1
+entries:
+  httpbin:
+  - annotations:
+      category: Application
+      support: Community
+    apiVersion: v2
+    appVersion: latest
+    created: "2025-05-26T04:57:38.26963829Z"
+    description: A Helm chart for deploying the httpbin service on Kubernetes
+    digest: 8f39803a7eed79518e10c71818b84d74664c4b26ef1c0106ae890a8570b2bf76
+    home: https://httpbin.org
+    icon: https://httpbin.org/icon.png
+    keywords:
+    - httpbin
+    - http
+    - testing
+    - kubernetes
+    maintainers:
+    - email: natarov23@gmail.com
+      name: Alex
+    name: httpbin
+    sources:
+    - https://github.com/kennethreitz/httpbin
+    urls:
+    - https://github.com/natarov/helm-charts/releases/download/httpbin-1.0.0/httpbin-1.0.0.tgz
+    version: 1.0.0
+generated: "2025-05-26T04:57:38.269649361Z"
