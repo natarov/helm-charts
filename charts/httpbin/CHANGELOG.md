@@ -10,4 +10,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Initial release of the httpbin Helm chart with configurable parameters for deployment, service, and ingress.
 - Added support for pod security context and resource requests/limits.
 - Included topology spread constraints for better pod distribution.
-- Enabled ingress with customizable host and path settings.
+- Enabled ingress with customizable host and path settings
