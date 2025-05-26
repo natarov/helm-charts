@@ -54,8 +54,7 @@ resources:
     memory: 128Mi
 
 # Node labels for pod assignment
-nodeSelector:
-  app: httpbin
+nodeSelector: {}
 
 
 # Define any tolerations for the pods
@@ -99,7 +98,7 @@ service:
 # Ingress configuration for the application
 ingress:
   # Enable or disable ingress
-  enabled: true
+  enabled: false
   # Annotations for the ingress
   annotations: {}
   # The ingress class name
