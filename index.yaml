@@ -25,4 +25,25 @@ entries:
     urls:
     - https://github.com/natarov/helm-charts/releases/download/httpbin-1.0.0/httpbin-1.0.0.tgz
     version: 1.0.0
-generated: "2025-05-26T11:12:56.396513535Z"
+  operator:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-06-20T21:43:22.123599707Z"
+    description: A Helm chart for the Operator application
+    digest: 3d7ca201d1c46e4044741b0e7d213334bf8045a09f1071ed927ac13ff6a4c39e
+    home: https://github.com/your-username/GamesOperator
+    keywords:
+    - golang
+    - web
+    - operator
+    maintainers:
+    - email: your.email@example.com
+      name: Your Name
+    name: operator
+    sources:
+    - https://github.com/your-username/GamesOperator
+    type: application
+    urls:
+    - https://github.com/natarov/helm-charts/releases/download/operator-0.1.0/operator-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-06-20T21:43:22.123605679Z"
