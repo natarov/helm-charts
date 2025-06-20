@@ -48,6 +48,26 @@ entries:
     version: 0.1.0
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2025-06-20T22:19:29.657112064Z"
+    description: A Helm chart for the Operator application
+    digest: 501fa92fc0997cf78c01cb636c74e82705419dde6573680aa283fbe05e2ad414
+    home: https://github.com/natarov/helm-charts
+    keywords:
+    - golang
+    - web
+    - operator
+    maintainers:
+    - email: your.email@example.com
+      name: Your Name
+    name: operator
+    sources:
+    - https://github.com/natarov/helm-charts
+    type: application
+    urls:
+    - https://github.com/natarov/helm-charts/releases/download/operator-0.0.2/operator-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2025-06-20T22:07:38.968030062Z"
     description: A Helm chart for the Operator application
     digest: 07c604aed370d8029266c6192d2fd9acdd35b12ac2dc7e057ed44d16080e1a34
@@ -66,4 +86,4 @@ entries:
     urls:
     - https://github.com/natarov/helm-charts/releases/download/operator-0.0.1/operator-0.0.1.tgz
     version: 0.0.1
-generated: "2025-06-20T22:07:38.968041464Z"
+generated: "2025-06-20T22:19:29.657124457Z"
